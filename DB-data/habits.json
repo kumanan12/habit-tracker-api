@@ -1,0 +1,8 @@
+[
+  { "id": 1, "habit": "Drink Water", "date": "2025-05-27" },
+  { "id": 2, "habit": "Morning Run", "date": "2025-05-27" },
+  { "id": 3, "habit": "Read a Book", "date": "2025-05-26" },
+  { "id": 4, "habit": "Meditate", "date": "2025-05-25" },
+  { "id": 5, "habit": "No Sugar", "date": "2025-05-25" },
+  { "id": 6, "habit": "this", "date": "2345" }
+]
