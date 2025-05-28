@@ -48,11 +48,18 @@ router.post("/", async (req, res) => {
     JSON.stringify(habitsDB.habits)
   )
 
-  res.status(200).json({ message : 'new habit added (success)'})
+  res.status(200).json(newHabit)
 });
 
 router.route("/:id").get((req, res) => {
-  res.json("get habits by id " + req.params.id + " ");
+    const habit = habitsDB.habits.find((habit) => habit.id === parseInt(req.params.id))
+
+    if(!habit){
+        res.status(404).json({ message : `Habit id ${req.params.id} is not avaliable`})
+    }
+
+    res.send(habit)
+
 });
 
 
