@@ -1,18 +1,17 @@
 [
-  { "id": 1, "habit": "Drink Water", "date": "2025-05-27" },
-  { "id": 2, "habit": "Morning Run", "date": "2025-05-27" },
-  { "id": 3, "habit": "Read a Book", "date": "2025-05-26" },
-  { "id": 4, "habit": "Meditate", "date": "2025-05-25" },
-  { "id": 5, "habit": "No Sugar", "date": "2025-05-25" },
-  { "id": 6, "habit": "this", "date": "2345" },
   {
-    "id": 7,
-    "habit": "wow",
-    "date": "Tue May 27 2025 20:29:58 GMT-0400 (Eastern Daylight Time)"
+    "id": 1,
+    "habit": "hey",
+    "date": "Tue May 27 2025 20:31:51 GMT-0400 (Eastern Daylight Time)"
   },
   {
-    "id": 8,
-    "habit": "this is going to be cool",
-    "date": "Tue May 27 2025 20:30:03 GMT-0400 (Eastern Daylight Time)"
+    "id": 2,
+    "habit": "wow",
+    "date": "Tue May 27 2025 20:31:52 GMT-0400 (Eastern Daylight Time)"
+  },
+  {
+    "id": 3,
+    "habit": "he",
+    "date": "Tue May 27 2025 20:37:34 GMT-0400 (Eastern Daylight Time)"
   }
 ]
