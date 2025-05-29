@@ -1,8 +1,16 @@
-const express = require("express");
+/* const express = require("express");
 const router = express.Router();
 const path = require("path");
 const fsPromises = require("fs").promises;
-const habitsData = require("../DB-data/habits.json");
+const habitsData = require("../DB-data/habits.json"); */
+
+import express from "express"
+import path from "path"
+import {promises as fsPromises} from "fs"
+import habitsData from "../DB-data/habits.json" with { type: "json" };
+
+
+const router = express.Router()
 
 function duplicate(input) {
   return habitsDB.habits.find((habit) => habit.habit === input); // habit property in each habit
@@ -44,7 +52,7 @@ router.post("/", async (req, res) => {
   habitsDB.setHabits([...habitsDB.habits, newHabit]);
 
   await fsPromises.writeFile(
-    path.join(__dirname, '..', 'DB-data', 'habits.json'),
+    path.join(path.dirname(new URL(import.meta.url).pathname), '..', 'DB-data', 'habits.json'),
     JSON.stringify(habitsDB.habits)
   )
 
@@ -64,8 +72,4 @@ router.route("/:id").get((req, res) => {
 
 
 
-/* router.post('/:id', (req,res) => {
-    res.json('')
-}) */
-
-module.exports = router;
+export default router;

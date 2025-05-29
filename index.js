@@ -1,13 +1,17 @@
-const express = require('express')
-const app = express()
-const path = require('path')
-const cors = require('cors')
+import express from "express";
+import path from "path";
+import cors from "cors";
+
+const app = express();
 const PORT = process.env.PORT || 7000;
 
 
-app.use(express.json())
-app.use(cors())
+/* Imports for middleware */
+import habitsRouter from "./router/habits.js";
 
-app.use('/habits', require('./router/habits'))
+app.use(express.json());
+app.use(cors());
 
-app.listen(PORT, () => console.log(`Habit tracker api running on ${PORT}`))
+app.use("/habits", habitsRouter);
+
+app.listen(PORT, () => console.log(`Habit tracker api running on ${PORT}`));
