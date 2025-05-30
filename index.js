@@ -18,8 +18,9 @@ const allowedOrigin = [
     frontendURL
 ]
 
+
 const corsOptions = {
-  origin: allowedOrigin,
+  origin: frontendURL,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 };
